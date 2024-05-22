@@ -1,0 +1,26 @@
+#%RAML 1.0 ResourceType
+
+get?:
+  description: <<getDescription>>
+  responses:       
+  is: [200-response: {responseType: <<getResponseType>>, responseExample: <<getResponseExample>>}]
+
+post?:
+  description: <<postDescription>>
+  body:
+    application/json: 
+      type: <<postBodyType>>
+      example: <<postBodyExample>>
+  is: [ 201-response:{responseType: <<postResponseType>>, responseExample: <<postResponseExample>>},
+        202-response:{responseType: <<postResponseType>>, responseExample: <<postResponseExample>>}
+         ]
+
+put?:
+  description: <<putDescription>>
+  body:
+    application/json:
+      type: <<putBodyType>>
+      example: <<putBodyExample>>
+  is: [ 201-response:{responseType: <<postResponseType>>, responseExample: <<postResponseExample>>}]
+
+      
