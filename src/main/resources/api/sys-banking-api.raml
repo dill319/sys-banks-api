@@ -1,0 +1,43 @@
+#%RAML 1.0
+title: banking api
+version: v1
+baseUri: https://mybank.cloudhub.io/api/{version}
+protocols: [HTTPS]
+
+mediaType: [application/json]
+resourceTypes:
+  method-collection: !include /resources/resourceType.raml
+  api-health: !include /resources/apiHealth.raml
+
+
+traits:
+  200-response: !include /response-traits/200-traits.raml
+  201-response: !include /response-traits/201-traits.raml
+  202-response: !include /response-traits/202-traits.raml   
+  policy: !include /response-traits/policy.raml     
+
+/health:
+  type: api-health
+
+/createAccount:
+  type:
+    method-collection:
+      postDescription: This is to create bank account for a customer
+      postBodyType: !include /datatypes/request/post-create-account.raml
+      postBodyExample: !include /examples/request-example/post-create-account.yaml
+      postResponseType: !include /datatypes/response/post-create-account.raml
+      postResponseExample: !include /examples/response-example/post-create-account.yaml
+  post:
+    is: [policy]
+
+  
+/getAccountDetails:
+  type:
+    method-collection:
+      getDescription: This end point is used fetch the account details of a customer
+      getResponseType:  !include /datatypes/response/get-account-details.raml
+      getResponseExample: !include /examples/response-example/get-account-details.yaml
+  get:
+    is: [policy]
+    queryParameters:
+      accountNumber: number

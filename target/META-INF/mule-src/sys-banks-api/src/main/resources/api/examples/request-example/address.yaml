@@ -1,0 +1,8 @@
+#%RAML 1.0 NamedExample
+address:
+  House No: "22-10"
+  street: "main road"
+  city: "Hyd"
+  state: "Telangana"
+  pin: 50090
+  
