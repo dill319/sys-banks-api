@@ -1,4 +1,0 @@
-#%RAML 1.0 NamedExample
-  status: "success"
-  AccountId: 123456789
-  BranchId: HDFC1234

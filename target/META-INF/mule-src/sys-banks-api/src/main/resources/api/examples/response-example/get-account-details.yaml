@@ -1,9 +1,0 @@
-#%RAML 1.0 NamedExample
-
-  Name: "Narendra Modi"
-  account No: 1234567890
-  branch Details: "miyapur"
-  Ifsc code: "hdfc123"
-  location: "Hyderabad"
-  contact no: 911234567
-  email: "test@gmail.com"
