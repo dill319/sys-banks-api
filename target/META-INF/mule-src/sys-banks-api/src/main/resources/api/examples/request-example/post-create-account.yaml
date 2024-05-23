@@ -1,0 +1,18 @@
+#%RAML 1.0 NamedExample
+  First Name: "Thomas"
+  Last Name: "Chandra"
+  contact No: 9876543210
+  email: "test@gmail.com"
+  Pan card: "abcde1234f"
+  address:
+    House No: "22-10"
+    street: "main road"
+    city: "Hyd"
+    state: "Telangana"
+    pin: 50090
+  benificiary Details:
+    - 
+      Name: "Sai"
+      age: 22
+      DOB: 1994-12-12
+      relationship: "Spouse"

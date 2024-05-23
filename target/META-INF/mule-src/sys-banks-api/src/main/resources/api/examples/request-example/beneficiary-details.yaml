@@ -1,0 +1,5 @@
+#%RAML 1.0 NamedExample
+  Name: "Sai"
+  age: 22
+  DOB: 1994-12-12
+  relationship: "Spouse"
